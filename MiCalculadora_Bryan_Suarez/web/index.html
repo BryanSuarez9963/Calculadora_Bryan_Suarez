@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Calculadora web básica, rápida y accesible.">
+    <title>Calculadora | Bryan Suárez</title>
+    <link href="assets/css/calculator.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/calculator.js" defer></script>
+</head>
+<body>
+    <div class="background-shape background-shape--one" aria-hidden="true"></div>
+    <div class="background-shape background-shape--two" aria-hidden="true"></div>
+
+    <div class="page-shell">
+        <main id="calculator-container" class="calculator" aria-labelledby="main-title">
+            <header class="calculator-header">
+                <div class="brand-mark" aria-hidden="true">
+                    <span>BS</span>
+                </div>
+                <div class="header-copy">
+                    <p class="eyebrow">Herramienta digital</p>
+                    <h1 id="main-title">Calculadora</h1>
+                </div>
+                <span class="status-badge">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Lista
+                </span>
+            </header>
+
+            <section class="display-section" aria-label="Pantalla de la calculadora">
+                <p id="calculation-preview" class="calculation-preview" aria-hidden="true">Operación básica</p>
+                <label class="sr-only" for="display">Resultado</label>
+                <input
+                    type="text"
+                    id="display"
+                    class="screen"
+                    readonly
+                    value="0"
+                    inputmode="decimal"
+                    aria-live="polite"
+                    aria-describedby="calculator-feedback"
+                >
+                <p id="calculator-feedback" class="calculator-feedback" role="status" aria-live="polite">Selecciona un número para comenzar</p>
+            </section>
+
+            <section class="keypad" aria-label="Teclado de la calculadora">
+                <button type="button" id="btn-clear" class="btn btn-action" data-action="clear" aria-label="Limpiar calculadora">C</button>
+                <button type="button" class="btn btn-operator" data-operator="/" aria-label="Dividir">&divide;</button>
+                <button type="button" class="btn btn-operator" data-operator="*" aria-label="Multiplicar">&times;</button>
+                <button type="button" class="btn btn-operator" data-operator="-" aria-label="Restar">&minus;</button>
+
+                <button type="button" class="btn btn-num" data-number="7">7</button>
+                <button type="button" class="btn btn-num" data-number="8">8</button>
+                <button type="button" class="btn btn-num" data-number="9">9</button>
+                <button type="button" class="btn btn-operator btn-tall" data-operator="+" aria-label="Sumar">+</button>
+
+                <button type="button" class="btn btn-num" data-number="4">4</button>
+                <button type="button" class="btn btn-num" data-number="5">5</button>
+                <button type="button" class="btn btn-num" data-number="6">6</button>
+
+                <button type="button" class="btn btn-num" data-number="1">1</button>
+                <button type="button" class="btn btn-num" data-number="2">2</button>
+                <button type="button" class="btn btn-num" data-number="3">3</button>
+                <button type="button" id="btn-equals" class="btn btn-equals" data-action="equals" aria-label="Calcular resultado">=</button>
+
+                <button type="button" class="btn btn-num btn-zero" data-number="0">0</button>
+                <button type="button" class="btn btn-num" data-number="." aria-label="Punto decimal">.</button>
+            </section>
+
+            <footer class="calculator-footer">
+                <span><kbd>Esc</kbd> limpiar</span>
+                <span><kbd>Enter</kbd> calcular</span>
+                <span><kbd>⌫</kbd> borrar</span>
+            </footer>
+        </main>
+
+        <p class="page-credit">Diseñada para cálculos rápidos y precisos.</p>
+    </div>
+</body>
+</html>
